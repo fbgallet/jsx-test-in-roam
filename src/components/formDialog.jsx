@@ -1,13 +1,14 @@
+import React from "react";
 import ReactDOM from "react-dom";
 import FormDialog from "roamjs-components/components/FormDialog";
 import { Button } from "@blueprintjs/core";
 import { useState } from "react";
+import createOverlayRender from "roamjs-components/util/createOverlayRender";
 
-const Extension = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Dialog = () => {
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <>
-      <Button onClick={() => setIsOpen(true)} text={"Open Form"} />
       <FormDialog
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
@@ -21,5 +22,6 @@ const Extension = () => {
 };
 
 export function displayForm() {
-  ReactDOM.render(<Extension />, document.querySelector(".roam-article"));
+  //ReactDOM.render(<Dialog />, document.querySelector(".roam-article"));
+  ReactDOM.render(<Dialog />, document.querySelector(".roam-article"));
 }
