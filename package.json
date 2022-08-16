@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "roamjs-components": "^0.72.4",
-    "roamjs-scripts": "^0.21.9"
+    "roamjs-scripts": "^0.21.10"
   }
 }
