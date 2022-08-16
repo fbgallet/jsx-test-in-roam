@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import FormDialog from "roamjs-components/components/FormDialog";
 import { Button } from "@blueprintjs/core";
 import { useState } from "react";
-import createOverlayRender from "roamjs-components/util/createOverlayRender";
+import renderOverlay from "roamjs-components/util/renderOverlay";
 
 const Dialog = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,5 +23,7 @@ const Dialog = () => {
 
 export function displayForm() {
   //ReactDOM.render(<Dialog />, document.querySelector(".roam-article"));
-  ReactDOM.render(<Dialog />, document.querySelector(".roam-article"));
+  renderOverlay({
+    Overlay: Dialog,
+  });
 }
