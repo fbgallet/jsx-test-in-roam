@@ -14,7 +14,14 @@ const Dialog = () => {
         onClose={() => setIsOpen(false)}
         onSubmit={(data) => window.alert(`User value selected: ${data.text}`)}
         fields={{
-          text: { type: "text", label: "Text Field" },
+          text: { type: "text", label: "Texts Field" },
+          page: { type: "page", label: "Choose a page" },
+          select: {
+            type: "select",
+            label: "Select something:",
+            options: ["A", "B", "C"],
+          },
+          flag: { type: "flag", label: "Remove button ?" },
         }}
       />
     </>
